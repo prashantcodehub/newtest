@@ -59,7 +59,6 @@ const Navbar = () => {
                 Compare
               </button>
             </li>
-            {/* <li><button type="button" className='item'>Something else here</button></li> */}
           </ul>
         </div>
       </div>

@@ -1,15 +1,36 @@
 .Cardorlist-contaner{
     background-color: black;
     color: blue;
-    width: 100%;
-    height: 50px;
+    height: 60px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
     justify-content: space-between;
+    box-sizing: border-box;
 }
 
-.card-button ,.list-button{
-    border: 0px;
+.card-button {
+    margin: 0px;
+    border-top: 0px;    
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    width: fit-content;
     background-color: black;
     color: white;
     font-size: larger;
+    width: 500px;
+}
 
+.list-button {
+    margin: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    width: fit-content;
+    background-color: black;
+    color: white;
+    font-size: larger;
+    width: 500px;
 }
