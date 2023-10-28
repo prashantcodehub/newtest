@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    color: white;
+}
+
+.navbar{
+    /* height: 0%; */
+    height: 80px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.everyThingExceptlogoInNavbar{
+    display: flex;
+    margin-right: 10px;
+    margin-top: 12px;
+}
+
+a{
+    text-decoration: none;
+}
+.logo{
+    margin-top: 15px;
+    padding-left: 2.5%;
+    font-size: 35px;
+}
+
+.dropdown-button {
+    color: white;
+    background-color: #3a80e9;
+
+    border-top: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
+    border-right: 0px;
+    border-radius: 15px;
+
+    margin-left: 10px;
+    margin-right: 10px;
+    
+    height: 57px;
+    width: 180px;
+
+    padding-bottom: 0px;    
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+
+    cursor: pointer;
+
+    font-size: 35px;
+    font-weight: 500;
+
+}
+
+.dropdown-menu {
+    display: none;
+    position: relative;
+    text-decoration: none;
+    list-style-type: none; 
+    /* left: 1144px; */
+    /* z-index: 1; */
+}
+
+.item{
+    cursor: pointer;
+    background-color: #3a80e9;
+    border: 0px;
+    display: block;
+    margin-top: 3px;
+    border-radius: 5px;
+    font-size: 20px;
+    max-width: 13vw;
+}
+
+.Dashboard{
+    margin-top: 6px;
+    font-size: 35px;
+    font-weight: 500;
+    border-style: solid;
+    border-color: #3a80e9;
+    border-radius: 10px;
+    background-color: black;
+    cursor: pointer;
+    float: right;
+}
