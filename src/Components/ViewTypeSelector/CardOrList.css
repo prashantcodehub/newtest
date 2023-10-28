@@ -1,0 +1,15 @@
+.Cardorlist-contaner{
+    background-color: black;
+    color: blue;
+    width: 100%;
+    height: 50px;
+    justify-content: space-between;
+}
+
+.card-button ,.list-button{
+    border: 0px;
+    background-color: black;
+    color: white;
+    font-size: larger;
+
+}
