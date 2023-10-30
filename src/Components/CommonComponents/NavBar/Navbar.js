@@ -1,6 +1,6 @@
 import React from "react";
 import "./nav.css";
-import Searchbar from "../MicroComponents/SearchBar/Searchbar";
+import Searchbar from "../../MicroComponents/SearchBar/Searchbar";
 
 const Navbar = () => {
   function toggleDropdown() {

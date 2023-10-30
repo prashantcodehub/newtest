@@ -1,17 +1,16 @@
 import React from 'react'
 import "./cards.css"
+import Logo from '../MicroComponents/Logo/Logo';
+// import Logoinfo from "../MicroComponents/LogoInfo/Logoinfo.js";
+
 const Cards = () => {
   return (
     <div className="card-contanet">
-      <div className="card-top-portion">
-        <img
-          src="https://picsum.photos/50/50"
-          alt="Logo"
-          className="Crypto-logo"
-        />
-        <p>BTC-USD</p>
-        <p>hahahaha</p>
+      <div>
+        <Logo/>
+        {/* <Logoinfo/> */}
       </div>
+        
     </div>
   );
 }
