@@ -1,0 +1,22 @@
+.Currentprice_button_contaner{
+    color: aliceblue;
+    background-color: rgb(21, 26, 28);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.Currentprice-button{
+    margin-left: 0;
+    background-color: black;
+    color: aliceblue;
+    border: 0;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.Currentprice{
+    display: flex;
+}

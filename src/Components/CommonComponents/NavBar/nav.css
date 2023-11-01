@@ -3,7 +3,7 @@
     /* height: 0%; */
     height: 80px;
     width: 100%;
-    background-color: black;
+    background-color: rgb(10, 9, 9);
     display: flex;
     justify-content: space-between;
     padding-top: 15px;
@@ -28,7 +28,7 @@ a{
 }
 
 .dropdown-button {
-    color: white;
+    color: antiquewhite;
     background-color: #3a80e9;
 
     border-top: 0px;
@@ -82,8 +82,8 @@ a{
     border-style: solid;
     border-color: #3a80e9;
     border-radius: 10px;
-    background-color: black;
+    background-color: rgb(10, 9, 9);
     cursor: pointer;
     float: right;
-    color: white;
+    color: antiquewhite;
 }

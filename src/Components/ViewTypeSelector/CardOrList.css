@@ -1,9 +1,10 @@
 .Cardorlist-contaner{
-    background-color: black;
+    background-color: rgb(10, 9, 9);;
     color: blue;
-    height: 60px;
+    height: 80px;
     padding-left: 50px;
     padding-right: 50px;
+    padding-bottom: 30px;
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
@@ -11,26 +12,32 @@
 
 .card-button {
     margin: 0px;
-    border-top: 0px;    
-    border-left: 0px;
-    border-right: 0px;
-    border-bottom: 0px;
-    width: fit-content;
-    background-color: black;
-    color: white;
-    font-size: larger;
+    border: antiquewhite;
+    border-style: solid;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    background-color: rgb(10, 9, 9);;
+    color: antiquewhite;
+    font-size: xx-large;
+    font-weight: 600;
+    height: 55px;
     width: 500px;
+    cursor: pointer;
 }
 
 .list-button {
     margin: 0px;
-    border-top: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    border-bottom: 0px;
-    width: fit-content;
-    background-color: black;
-    color: white;
-    font-size: larger;
+    border: antiquewhite;
+    border-style: solid;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;   
+    background-color: rgb(10, 9, 9);;
+    color: antiquewhite;
+    font-size: xx-large;
+    font-weight: 600;
+    height: 55px;
     width: 500px;
+    cursor: pointer;
 }

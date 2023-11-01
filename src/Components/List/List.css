@@ -1,0 +1,11 @@
+.listContaner{
+    display: flex;
+    color: antiquewhite;
+    margin: 25px;
+    padding: 10px;
+    justify-content: space-between;
+    justify-items: center;
+    background-color: rgb(21, 26, 28);
+    border-radius: 15px;
+    height: 80px;
+}
