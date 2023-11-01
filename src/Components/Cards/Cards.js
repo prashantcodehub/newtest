@@ -1,14 +1,14 @@
 import React from 'react'
 import "./cards.css"
 import Logo from '../MicroComponents/Logo/Logo';
-// import Logoinfo from "../MicroComponents/LogoInfo/Logoinfo.js";
+import Logoinfo from "../MicroComponents/LogoInfo/Logoinfo.js";
 
 const Cards = () => {
   return (
     <div className="card-contanet">
-      <div>
+      <div className='Symbol-area'>
         <Logo/>
-        {/* <Logoinfo/> */}
+        <Logoinfo/>
       </div>
         
     </div>

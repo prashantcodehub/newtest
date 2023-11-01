@@ -3,9 +3,9 @@ import "./LOGO.css"
 
 const Logo = () => {
   return (
-    <div>
+    <div className='logo-contaner'>
       <img
-        src="https://picsum.photos/50/50"
+        src="https://picsum.photos/60/60"
         alt="Logo"
         className="Crypto-logo"
       />

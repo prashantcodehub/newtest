@@ -1,15 +1,19 @@
 import "./App.css";
 import Navbar from "./Components/CommonComponents/NavBar/Navbar";
-import Cards from "./Components/Cards/Cards";
 import Cardorlist from "./Components/ViewTypeSelector/Cardorlist";
+import Pagenumber from './Components/PageNumber/Pagenumber'
+
+
 function App() {
+
   return (
     <div className="App">
       <Navbar />
       <Cardorlist />
-      <Cards />
+      <Pagenumber/>
     </div>
   );
+
 }
 
 export default App;
