@@ -8,31 +8,47 @@ import Pagenumber from "../PageNumber/Pagenumber";
 const Cardorlist = ({ data }) => {
   const [showType, setshowType] = useState(true);
   const [pageNo, setPageNo] = useState(1);
-  
+  const [viewStyler, setviewStyler] = useState("coN");
+
   let itemPerPage = 10;
-  let lastItemNo = pageNo * itemPerPage ;
-  let firstItemNo = lastItemNo - itemPerPage ;
+  let lastItemNo = pageNo * itemPerPage;
+  let firstItemNo = lastItemNo - itemPerPage;
 
   const currentPageData = data.slice(firstItemNo, lastItemNo);
   const totalNoOfPages = Math.ceil(data.length / itemPerPage);
+
+  const handleListViewClicked = () => {
+    setshowType(false);
+    setviewStyler("lis");
+  };
+  const handleGridViewClicked = () => {
+    setshowType(true);
+    setviewStyler("coN");
+  };
 
   return (
     <div>
       <div className="Cardorlist-contaner">
         <div>
-          <button className="card-button" onClick={() => setshowType(true)}>
+          <button
+            className="card-button"
+            onClick={() => handleGridViewClicked()}
+          >
             Card
           </button>
         </div>
 
         <div>
-          <button className="list-button" onClick={() => setshowType(false)}>
+          <button
+            className="list-button"
+            onClick={() => handleListViewClicked()}
+          >
             List
           </button>
         </div>
       </div>
 
-      <div className="coN">
+      <div className={viewStyler}>
         {showType
           ? currentPageData?.map((item) => (
               <Cards

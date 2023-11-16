@@ -1,16 +1,15 @@
 import { Pagination } from '@mui/material';
-import React from 'react'
+import React, { useState } from 'react'
 
 const Pagenumber = ({ totalNoOfPages, setPageNo }) => {
-  const [page, setPage] = React.useState(1);
+  const [page, setPage] = useState(1);
   const handleChange = (e, value) => {
     setPage(value);
     setPageNo(value);
   };
 
   return (
-    <div>
-      {/* <Pagination count={totalNoOfPages} variant="outlined" color="primary" /> */}
+    <div className="pageNumber">
       <Pagination count={totalNoOfPages} page={page} onChange={handleChange} />
     </div>
   );
