@@ -4,19 +4,16 @@ import { useState } from "react";
 import Cards from "../Cards/Cards";
 import List from "../List/List";
 
-const Cardorlist = () => {
-  
+const Cardorlist = ({ data }) => {
   let [showType, setshowType] = useState(true);
 
   return (
-    <div >
-
+    <div>
       <div className="Cardorlist-contaner">
-
         <div>
           <button
             className="card-button"
-            onClick={() => setshowType((showType = true))}
+            onClick={() => setshowType(true)} 
           >
             Card
           </button>
@@ -25,17 +22,17 @@ const Cardorlist = () => {
         <div>
           <button
             className="list-button"
-            onClick={() => setshowType((showType = false))}
+            onClick={() => setshowType(false)} 
           >
             List
           </button>
         </div>
-
       </div>
-
-      {showType ? <Cards/> : <List/>}
-
-      
+      <div className="coN">
+        {showType
+          ? data?.map((item) => <Cards name={item.name} />)
+          : data?.map((item) => <List name={item.name} />)}
+      </div>
     </div>
   );
 };

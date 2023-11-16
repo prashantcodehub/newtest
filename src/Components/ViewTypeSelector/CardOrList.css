@@ -41,3 +41,10 @@
     width: 500px;
     cursor: pointer;
 }
+
+.coN{
+    display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+}

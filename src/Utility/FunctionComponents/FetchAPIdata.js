@@ -1,15 +1,11 @@
+//let data;
+export async function FetchAPIdata() {
+  let address = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=inr&order=market_cap_desc&per_page=10&page=1&sparkline=false&locale=en`;
+  // ( `https://www.googleapis.com/books/v1/volumes?q=harry+potter`)  :-> api for testing;
+  // 'https://jsonplaceholder.typicode.com/todos/1'   :-> api for testing;
 
-export async function FetchAPIdata () {
+  const response = await fetch(address);
+  const coin_data = await response.json();
 
-    // try {
-        let address =
-          `https://www.googleapis.com/books/v1/volumes?q=harry+potter`;
-        const responce = await fetch( address );
-        const coin_data = await responce.json();
-        console.log("coin_data", coin_data);
-    // } catch (error) {
-    //     console.log(error);
-    // }
+  return coin_data;
 }
-
-FetchAPIdata();
