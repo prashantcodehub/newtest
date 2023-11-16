@@ -1,13 +1,13 @@
 import "./App.css";
 import Navbar from "./Components/CommonComponents/NavBar/Navbar";
 import Cardorlist from "./Components/ViewTypeSelector/Cardorlist";
-import Pagenumber from "./Components/PageNumber/Pagenumber";
+// import Pagenumber from "./Components/PageNumber/Pagenumber";
 import React, { useEffect, useState } from "react";
 import { FetchAPIdata } from "./Utility/FunctionComponents/FetchAPIdata";
 
 function App() {
   const [data, setData] = useState([]);
-
+  
   const getData = async () => {
     try {
       const coin_data = await FetchAPIdata();
@@ -21,11 +21,12 @@ function App() {
     getData();
   }, []);
 
+  
+
   return (
     <div className="App">
       <Navbar />
-      <Cardorlist data={data} />
-      <Pagenumber />
+      <Cardorlist data={data}/>
     </div>
   );
 }

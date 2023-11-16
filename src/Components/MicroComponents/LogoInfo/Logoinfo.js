@@ -1,11 +1,11 @@
 import React from 'react'
 import "./Logoinfo.css";
 
-const Logoinfo = (props) => {
+const Logoinfo = ({name, symbol}) => {
   return (
     <div className="Logoinfo">
-      <p className="symbol">Symbol</p>
-      <p className="name">{props.name}</p>
+      <p className="symbol">{symbol}</p>
+      <p className="name">{name}</p>
     </div>
   );
 }

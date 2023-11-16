@@ -1,16 +1,12 @@
 import React from 'react'
 import "./LOGO.css"
 
-const Logo = () => {
+const Logo = ({ image }) => {
   return (
-    <div className='logo-contaner'>
-      <img
-        src="https://picsum.photos/60/60"
-        alt="Logo"
-        className="Crypto-logo"
-      />
+    <div className="logo-contaner">
+      <img src={image} alt="Logo" className="Crypto-logo" />
     </div>
   );
-}
+};
 
 export default Logo

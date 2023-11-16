@@ -1,20 +1,26 @@
 import React from 'react'
 import "./CurrentPrice.css"
 
-const Currentprice = () => {
-  return (
-    <div className='Currentprice_contaner'>
+const Currentprice = ({ current_price, price_change_percentage_24h }) => {
 
+  let flag;
+  if (price_change_percentage_24h > 0)  {flag = true;}
+  else {flag = false;}
+
+  return (
+    <div className="Currentprice_contaner">
       <div className="Currentprice_button_contaner ">
-        <button className="priceChange  Currentprice-button"> -3.2% </button>
-        <button className="iconForUp  Currentprice-button"> up </button>
-        <button className="iconForDown  Currentprice-button"> down </button>
+        <button className="priceChange  Currentprice-button"> {price_change_percentage_24h} </button>
+
+        { flag ? 
+          <button className="iconForUp  Currentprice-button"> up </button> 
+          : <button className="iconForDown  Currentprice-button"> down </button>
+        }
       </div>
 
-      <h2 className='Currentprice'>1254524</h2>
-      
+      <h2 className="Currentprice">{current_price}</h2>
     </div>
   );
-}
+};
 
 export default Currentprice

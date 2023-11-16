@@ -6,16 +6,27 @@ import Totalvolume from '../MicroComponents/TotalVolume/Totalvolume';
 import Marketcap from '../MicroComponents/MarketCap/Marketcap';
 import "./List.css"
 
-const List = () => {
+const List = ({
+  image,
+  name,
+  current_price,
+  price_change_percentage_24h,
+  total_volume,
+  market_cap,
+  symbol,
+}) => {
   return (
-    <div className="listContaner" >
-      <Logo />
-      <Logoinfo />
-      <Currentprice />
-      <Totalvolume />
-      <Marketcap />
+    <div className="listContaner">
+      <Logo image={image} />
+      <Logoinfo name={name} symbol={symbol} />
+      <Currentprice
+        current_price={current_price}
+        price_change_percentage_24h={price_change_percentage_24h}
+      />
+      <Totalvolume total_volume={total_volume} />
+      <Marketcap market_cap={market_cap} />
     </div>
   );
-}
+};
 
 export default List
