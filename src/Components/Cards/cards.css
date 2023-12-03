@@ -5,9 +5,8 @@
     display: block;
     box-sizing: border-box;
     box-shadow: 3rem;
-    border: 3px;
+    transition: border 0.2s ease-in-out;
     width: 20rem;
-    /* border-color: blue; */
     padding: 2rem;
     border-radius: 15px;
     min-height: fit-content;
@@ -15,4 +14,11 @@
 
 .Symbol-area{
     display: flex;
+}
+
+#card-contanet-red:hover {
+    border: 3px solid red;
+}
+#card-contanet-green:hover {
+    border: 3px solid green;
 }

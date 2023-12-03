@@ -15,8 +15,14 @@ const Cards = ({
   market_cap,
   symbol
 }) => {
+  let cardClass;
+  if (price_change_percentage_24h > 0) {
+    cardClass = "card-contanet-green";
+  } else {
+    cardClass = "card-contanet-red";
+  }
   return (
-    <div className="card-contanet">
+    <div className="card-contanet" id={cardClass}>
       <div className="Symbol-area">
         <Logo image={image} />
         <Logoinfo name={name} symbol={symbol} />

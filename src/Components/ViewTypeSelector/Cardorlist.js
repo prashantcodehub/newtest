@@ -4,6 +4,7 @@ import { useState } from "react";
 import Cards from "../Cards/Cards";
 import List from "../List/List";
 import Pagenumber from "../PageNumber/Pagenumber";
+import CustomPagination from "../PageNumber/CustomPagination";
 
 const Cardorlist = ({ data }) => {
   const [showType, setshowType] = useState(true);
@@ -75,7 +76,7 @@ const Cardorlist = ({ data }) => {
       </div>
 
       <div>
-        <Pagenumber
+        <CustomPagination
           pageNo={pageNo}
           totalNoOfPages={totalNoOfPages}
           setPageNo={setPageNo}

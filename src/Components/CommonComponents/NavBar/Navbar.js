@@ -1,6 +1,9 @@
 import React from "react";
 import "./nav.css";
 import Searchbar from "../../MicroComponents/SearchBar/Searchbar";
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import WishList from "../../Pages/WishList/WishList";
+import Compare from "../../Pages/CompareCoins/Compare";
 
 const Navbar = () => {
   function toggleDropdown() {
@@ -26,43 +29,59 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar">
-      <div className="logo">
-        <a href="/#">
-          <b> CryptoTracker. </b>
-        </a>
-      </div>
-
-      <div className="everyThingExceptlogoInNavbar">
-        <Searchbar />
-
-        <div>
-          <button className="Dashboard"> Dashboard </button>
+    <Router>
+      <div className="navbar">
+        <div className="logo">
+          <a href="/#">
+            <b> CryptoTracker. </b>
+          </a>
         </div>
-        <div className="dropdown">
-          <button
-            className="dropdown-button"
-            type="button"
-            onClick={toggleDropdown}
-          >
-            Menu
-          </button>
 
-          <ul className="dropdown-menu" id="myDropdown">
-            <li>
-              <button type="button" className="item">
-                Wish list
-              </button>
-            </li>
-            <li>
-              <button type="button" className="item">
-                Compare
-              </button>
-            </li>
-          </ul>
+        <div className="everyThingExceptlogoInNavbar">
+          <Searchbar />
+
+          <div>
+            <button className="Dashboard">
+              <Link to="./">Dashboard</Link>
+            </button>
+          </div>
+          <div className="dropdown">
+            <button
+              className="dropdown-button"
+              type="button"
+              onClick={toggleDropdown}
+            >
+              Menu
+            </button>
+
+            <ul className="dropdown-menu" id="myDropdown">
+              <li>
+                <button type="button" className="item">
+                  <a href="../../Pages/WishList/WishList">Wish list</a>
+                </button>
+              </li>
+              <li>
+                <button type="button" className="item">
+                  <Link to="../../Pages/Compare/Compare">Compare</Link>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <Routes>
+            <Route
+              exact
+              path="../../Pages/CoinPage/CoinPage"
+              element={<WishList />}
+            ></Route>
+            <Route
+              exact
+              path="../../Pages/Compare/Compare"
+              element={<Compare />}
+            ></Route>
+          </Routes>
         </div>
       </div>
-    </div>
+    </Router>
   );
 };
 
