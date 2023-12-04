@@ -1,9 +1,7 @@
 import React from "react";
 import "./nav.css";
 import Searchbar from "../../MicroComponents/SearchBar/Searchbar";
-import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
-import WishList from "../../Pages/WishList/WishList";
-import Compare from "../../Pages/CompareCoins/Compare";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   function toggleDropdown() {
@@ -28,60 +26,71 @@ const Navbar = () => {
     }
   };
 
+  const navigate = useNavigate();
+
   return (
-    <Router>
-      <div className="navbar">
-        <div className="logo">
-          <a href="/#">
-            <b> CryptoTracker. </b>
-          </a>
+    <div className="navbar">
+      <div className="logo">
+        <a href="/#">
+          <b> CryptoTracker. </b>
+        </a>
+      </div>
+
+      <div className="everyThingExceptlogoInNavbar">
+        <Searchbar />
+
+        <div>
+          <button className="Dashboard">
+            <Link to="./">Dashboard</Link>
+          </button>
         </div>
+        <div className="dropdown">
+          <button
+            className="dropdown-button"
+            type="button"
+            onClick={toggleDropdown}
+          >
+            Menu
+          </button>
 
-        <div className="everyThingExceptlogoInNavbar">
-          <Searchbar />
+          <ul className="dropdown-menu" id="myDropdown">
+            <li>
+              <button
+                type="button"
+                className="item"
+                onClick={() => navigate("./Components/Pages/WishList/WishList")}
+              >
+                <Link to="./Components/Pages/WishList/WishList">Wish list</Link>
+              </button>
+            </li>
 
-          <div>
-            <button className="Dashboard">
-              <Link to="./">Dashboard</Link>
-            </button>
-          </div>
-          <div className="dropdown">
-            <button
-              className="dropdown-button"
-              type="button"
-              onClick={toggleDropdown}
-            >
-              Menu
-            </button>
+            <li>
+              <button
+                type="button"
+                className="item"
+                onClick={() =>
+                  navigate("./Components/Pages/CompareCoins/Compare")
+                }
+              >
+                <Link to="./Components/Pages/CompareCoins/Compare">
+                  Compare{" "}
+                </Link>
+              </button>
+            </li>
 
-            <ul className="dropdown-menu" id="myDropdown">
-              <li>
-                <button type="button" className="item">
-                  <a href="../../Pages/WishList/WishList">Wish list</a>
-                </button>
-              </li>
-              <li>
-                <button type="button" className="item">
-                  <Link to="../../Pages/Compare/Compare">Compare</Link>
-                </button>
-              </li>
-            </ul>
-          </div>
-          <Routes>
-            <Route
-              exact
-              path="../../Pages/CoinPage/CoinPage"
-              element={<WishList />}
-            ></Route>
-            <Route
-              exact
-              path="../../Pages/Compare/Compare"
-              element={<Compare />}
-            ></Route>
-          </Routes>
+            <li>
+              <button
+                type="button"
+                className="item"
+                onClick={() => navigate("./Components/Pages/CoinPage/CoinPage")}
+              >
+                <Link to="./Components/Pages/CoinPage/CoinPage">CoinPage</Link>
+              </button>
+            </li>
+          </ul>
         </div>
       </div>
-    </Router>
+    </div>
   );
 };
 

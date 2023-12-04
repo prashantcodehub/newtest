@@ -1,5 +1,5 @@
 import React from 'react'
-import List from '../../List/List'
+// import List from '../../List/List'
 
 
 
@@ -7,10 +7,10 @@ import List from '../../List/List'
 //https://api.coingecko.com/api/v3/coins/{id}
 // id = "bitcoin"
 //https://api.coingecko.com/api/v3/coins/{id}/market_chart?vs_currency={inr}&days={30}
-const CoinPage = ({PerticularCoinData}) => {
+const CoinPage = () => { //{PerticularCoinData}
   return (
     <div>
-      <List
+      {/* <List
         name={PerticularCoinData?.name}
         image={PerticularCoinData?.image}
         current_price={PerticularCoinData?.current_price}
@@ -25,7 +25,8 @@ const CoinPage = ({PerticularCoinData}) => {
       <div>
         <h2>{PerticularCoinData.name}</h2>
         <p>{PerticularCoinData.discription.en}</p>
-      </div>
+      </div> */}
+      <h1>CoinPage</h1>
     </div>
   );
 }

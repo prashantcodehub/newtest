@@ -1,14 +1,9 @@
-import React from 'react'
-import Cards from '../../Cards/Cards';
+import React from "react";
 
-const WishList = async() => {
-
+const WishList = () => {
   return (
-    <div>
-      <h1>WishList Page</h1>
-      
-    </div>
+    <h1>WishList</h1>
   );
-}
+};
 
 export default WishList;
