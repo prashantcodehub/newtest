@@ -25,6 +25,15 @@ const List = ({
       />
       <Totalvolume total_volume={total_volume} />
       <Marketcap market_cap={market_cap} />
+
+      <div>
+        <img src={image} alt="Logo" className="Crypto-logo-List" />
+
+        <p className="symbol">{symbol}</p>
+        <p className="name">{name}</p>
+
+        
+      </div>
     </div>
   );
 };

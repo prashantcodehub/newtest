@@ -11,19 +11,19 @@ import CoinPage from "./Components/Pages/CoinPage/CoinPage";
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Layout />}>
-
         <Route path="" element={<Dashboard />}>
-          <Route path="CoinPage" element={<CoinPage />} />
+          {/* <Route path="CoinPage/" element={<CoinPage />} /> */}
         </Route>
+        
+        <Route path="CoinPage/" element={<CoinPage />} />
 
         <Route path="Compare/" element={<Compare />}>
-          <Route path="CoinPage" element={<CoinPage />} />
+          {/* <Route path="CoinPage/" element={<CoinPage />} /> */}
         </Route>
 
-        <Route path="WishList/" element={<WishList />} >
-          <Route path="CoinPage" element={<CoinPage />} />
+        <Route path="WishList/" element={<WishList />}>
+          {/* <Route path="CoinPage/" element={<CoinPage />} /> */}
         </Route>
-
       </Route>
     )
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import "./nav.css";
 import Searchbar from "../../MicroComponents/SearchBar/Searchbar";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   function toggleDropdown() {
@@ -26,7 +26,7 @@ const Navbar = () => {
     }
   };
 
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
 
   return (
     <div className="navbar">
@@ -41,7 +41,7 @@ const Navbar = () => {
 
         <div>
           <button className="Dashboard">
-            <Link to="./">Dashboard</Link>
+            <Link to="">Dashboard</Link>
           </button>
         </div>
         <div className="dropdown">
@@ -58,9 +58,9 @@ const Navbar = () => {
               <button
                 type="button"
                 className="item"
-                onClick={() => navigate("./Components/Pages/WishList/WishList")}
+                //onClick={() => navigate("./Components/Pages/WishList/WishList")}
               >
-                <Link to="./Components/Pages/WishList/WishList">Wish list</Link>
+                <Link to="WishList/">Wish list</Link>
               </button>
             </li>
 
@@ -68,13 +68,11 @@ const Navbar = () => {
               <button
                 type="button"
                 className="item"
-                onClick={() =>
-                  navigate("./Components/Pages/CompareCoins/Compare")
-                }
+                // onClick={() =>
+                //   navigate("./Components/Pages/CompareCoins/Compare")
+                // }
               >
-                <Link to="./Components/Pages/CompareCoins/Compare">
-                  Compare{" "}
-                </Link>
+                <Link to="Compare/">Compare</Link>
               </button>
             </li>
 
@@ -82,9 +80,9 @@ const Navbar = () => {
               <button
                 type="button"
                 className="item"
-                onClick={() => navigate("./Components/Pages/CoinPage/CoinPage")}
+                // onClick={() => navigate("./Components/Pages/CoinPage/CoinPage")}
               >
-                <Link to="./Components/Pages/CoinPage/CoinPage">CoinPage</Link>
+                <Link to="CoinPage/">CoinPage</Link>
               </button>
             </li>
           </ul>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Cardorlist from '../ViewTypeSelector/Cardorlist';
 import { FetchAPIdata } from '../../Utility/FunctionComponents/FetchAPIdata';
+import "../../App.css"
 
 function Dashboard() {
 
@@ -20,9 +21,9 @@ function Dashboard() {
     }, []);
 
     return(
-        <>
+        <div className="App">
             <Cardorlist data={data} />
-        </>
+        </div>
     );
 }
 
