@@ -3,7 +3,6 @@ import "./CardOrList.css";
 import { useState } from "react";
 import Cards from "../Cards/Cards";
 import List from "../List/List";
-import Pagenumber from "../PageNumber/Pagenumber";
 import CustomPagination from "../PageNumber/CustomPagination";
 
 const Cardorlist = ({ data }) => {
@@ -30,22 +29,12 @@ const Cardorlist = ({ data }) => {
   return (
     <div>
       <div className="Cardorlist-contaner">
-        <div>
-          <button
-            className="card-button"
-            onClick={() => handleGridViewClicked()}
-          >
-            Card
-          </button>
+        <div className="card-button" onClick={() => handleGridViewClicked()}>
+          Card
         </div>
 
-        <div>
-          <button
-            className="list-button"
-            onClick={() => handleListViewClicked()}
-          >
-            List
-          </button>
+        <div className="list-button" onClick={() => handleListViewClicked()}>
+          List
         </div>
       </div>
 

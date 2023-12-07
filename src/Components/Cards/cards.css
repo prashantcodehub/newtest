@@ -10,6 +10,7 @@
     padding: 2rem;
     border-radius: 15px;
     min-height: fit-content;
+    border: 3px solid #151a1c;
 }
 
 .Symbol-area{
@@ -20,5 +21,5 @@
     border: 3px solid red;
 }
 #card-contanet-green:hover {
-    border: 3px solid green;
+    border: 3px solid #27b60f;
 }
