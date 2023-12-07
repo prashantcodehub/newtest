@@ -1,14 +1,29 @@
-.Currentprice_button_contaner{
-    color: aliceblue;
-    background-color: rgb(21, 26, 28);
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    height: 40px;
-    border-radius: 10px;
+.change_persentage{
+    align-self: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+}
+.Currentprice_change_contaner_DOWN{
+    width: 100px;
+        background-color: #970b0b;
+        align-self: center;
+        text-align: center;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        border-radius: 15px;
+}
+.Currentprice_change_contaner_UP {
+    width: 100px;
+        background-color: #27b60f;
+        align-self: center;
+        text-align: center;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        border-radius: 15px;
 }
 
-.Currentprice-button{
+/* .Currentprice-button{
     margin-left: 0;
     background-color: black;
     color: aliceblue;
@@ -16,7 +31,7 @@
     border-radius: 10px;
     padding-left: 10px;
     padding-right: 10px;
-}
+} */
 .Currentprice{
     display: flex;
 }

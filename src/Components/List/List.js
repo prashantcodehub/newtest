@@ -40,11 +40,11 @@ const List = ({
 
       <p className="price_change_percentage_24h">
         <p className={PCV}>{price_change_percentage_24h}</p>
-        {flag ? (
+        {/* {flag ? (
           <p className="list-changeUP"> up </p>
         ) : (
           <p className="list-changedown"> down </p>
-        )}
+        )} */}
       </p>
 
       <p className="total_volume">

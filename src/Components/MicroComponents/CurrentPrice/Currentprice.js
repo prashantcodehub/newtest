@@ -3,21 +3,15 @@ import "./CurrentPrice.css"
 
 const Currentprice = ({ current_price, price_change_percentage_24h }) => {
 
-  let flag;
-  if (price_change_percentage_24h > 0)  {flag = true;}
-  else {flag = false;}
+  let Currentprice_change_contaner;
+  if (price_change_percentage_24h > 0)  {Currentprice_change_contaner = "Currentprice_change_contaner_UP";}
+  else {Currentprice_change_contaner = "Currentprice_change_contaner_DOWN";}
 
   return (
     <div className="Currentprice_contaner">
-      <div className="Currentprice_button_contaner ">
-        <button className="priceChange  Currentprice-button"> {price_change_percentage_24h} </button>
-
-        { flag ? 
-          <button className="iconForUp  Currentprice-button"> up </button> 
-          : <button className="iconForDown  Currentprice-button"> down </button>
-        }
-      </div>
-
+      <p className='change_persentage'>
+       <p className={Currentprice_change_contaner}>{price_change_percentage_24h}</p> 
+      </p>
       <h2 className="Currentprice">{current_price}</h2>
     </div>
   );

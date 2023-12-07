@@ -24,7 +24,7 @@ const Cards = ({
   return (
     <div className="card-contanet" id={cardClass}>
       <div className="Symbol-area">
-        <Logo image={image} />
+        <Logo image={image} /> 
         <Logoinfo name={name} symbol={symbol} />
       </div>
       <Currentprice
