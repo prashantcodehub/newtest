@@ -16,13 +16,13 @@ const List = ({
   symbol,
 }) => {
 
-  let flag = true;
+  
   let PCV ;
   let listContaner ;
   if ( price_change_percentage_24h > 0 ) {
-    flag = true; PCV = "PCV-UP"; listContaner = "listContaner-up";
+     PCV = "PCV-UP"; listContaner = "listContaner-up";
   } else {
-    flag = false; PCV = "PCV-DOWN"; listContaner = "listContaner-down";
+     PCV = "PCV-DOWN"; listContaner = "listContaner-down";
   }
 
   return (
