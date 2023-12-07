@@ -1,4 +1,7 @@
-Coingecko api used for coin data 
-card and list view
-used MUI pagination component  
-used react-router-dom 6.20.1 
+Used react-router-dom 6.20.1 
+
+Used MUI pagination component  
+
+Coingecko api used for coin data
+
+Card and list view
