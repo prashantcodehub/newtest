@@ -6,6 +6,7 @@ export async function FetchAPIdata() {
 
   const response = await fetch(address);
   const coin_data = await response.json();
-
+  //console.log("API hit")
+  //console.log(coin_data);
   return coin_data;
 }

@@ -2,7 +2,7 @@ import React from "react";
 import { Pagination } from "@mui/material";
 import "./Pagination.css";
 
-const CustomPagination = ({ setPageNo, totalNoOfPages = 10 }) => {
+const CustomPagination = ({ setPageNo, totalNoOfPages }) => {
   const handlePageChange = (page) => {
     // console.log(page, "this is page");                   //----------------------->Check it page
     setPageNo(page);

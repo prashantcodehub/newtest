@@ -1,30 +1,30 @@
 import React from "react";
 import "./nav.css";
-import Searchbar from "../../MicroComponents/SearchBar/Searchbar";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  function toggleDropdown() {
-    var dropdown = document.getElementById("myDropdown");
-    if (dropdown.style.display === "block") {
-      dropdown.style.display = "none";
-    } else {
-      dropdown.style.display = "block";
-    }
-  }
 
-  window.onclick = function (event) {
-    if (!event.target.matches(".dropdown-button")) {
-      var dropdowns = document.getElementsByClassName("dropdown-menu");
-      console.log(dropdowns);
-      for (var i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.style.display === "block") {
-          openDropdown.style.display = "none";
-        }
-      }
-    }
-  };
+  // function toggleDropdown() {
+  //   var dropdown = document.getElementById("myDropdown");
+  //   if (dropdown.style.display === "block") {
+  //     dropdown.style.display = "none";
+  //   } else {
+  //     dropdown.style.display = "block";
+  //   }
+  // }
+
+  // window.onclick = function (event) {
+  //   if (!event.target.matches(".dropdown-button")) {
+  //     var dropdowns = document.getElementsByClassName("dropdown-menu");
+  //     //console.log(dropdowns);
+  //     for (var i = 0; i < dropdowns.length; i++) {
+  //       var openDropdown = dropdowns[i];
+  //       if (openDropdown.style.display === "block") {
+  //         openDropdown.style.display = "none";
+  //       }
+  //     }
+  //   }
+  // };
 
   //const navigate = useNavigate();
 
@@ -37,14 +37,12 @@ const Navbar = () => {
       </div>
 
       <div className="everyThingExceptlogoInNavbar">
-        <Searchbar />
-
         <div>
           <button className="Dashboard">
             <Link to="">Dashboard</Link>
           </button>
         </div>
-        <div className="dropdown">
+        {/* <div className="dropdown">
           <button
             className="dropdown-button"
             type="button"
@@ -86,7 +84,7 @@ const Navbar = () => {
               </button>
             </li>
           </ul>
-        </div>
+        </div> */}
       </div>
     </div>
   );

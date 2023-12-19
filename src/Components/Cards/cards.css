@@ -11,8 +11,11 @@
     border-radius: 15px;
     min-height: fit-content;
     border: 3px solid #151a1c;
+    cursor: pointer;
 }
-
+.card-contanet-hide{
+    display: none;
+}
 .Symbol-area{
     display: flex;
     justify-content: space-between;

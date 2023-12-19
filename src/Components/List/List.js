@@ -1,10 +1,5 @@
-import React from 'react'
-// import Logo from '../MicroComponents/Logo/Logo';
-// import Logoinfo from '../MicroComponents/LogoInfo/Logoinfo';
-// import Currentprice from '../MicroComponents/CurrentPrice/Currentprice';
-// import Totalvolume from '../MicroComponents/TotalVolume/Totalvolume';
-// import Marketcap from '../MicroComponents/MarketCap/Marketcap';
-import "./List.css"
+import React from "react";
+import "./List.css";
 
 const List = ({
   image,
@@ -15,49 +10,48 @@ const List = ({
   market_cap,
   symbol,
 }) => {
-
-  
-  let PCV ;
-  let listContaner ;
-  if ( price_change_percentage_24h > 0 ) {
-     PCV = "PCV-UP"; listContaner = "listContaner-up";
+  let PCV;
+  let listContaner;
+  if (price_change_percentage_24h > 0) {
+    PCV = "PCV-UP";
+    listContaner = "listContaner-up";
   } else {
-     PCV = "PCV-DOWN"; listContaner = "listContaner-down";
+    PCV = "PCV-DOWN";
+    listContaner = "listContaner-down";
   }
 
   return (
     <div className="listContaner" id={listContaner}>
-      <img src={image} alt="Logo" className="Logo" />
+      <div style={{display: "flex"}}>
+        <img src={image} alt="Logo" className="Logo" />
+      </div>
 
-      <p className="SN">
+      <div className="SN">
         <p className="symbol">{symbol}</p>
         <p className="name">{name}</p>
-      </p>
+      </div>
 
-      <p className="current_price">
+      <div className="current_price">
         <h2>{current_price}</h2>
-      </p>
+      </div>
 
-      <p className="price_change_percentage_24h">
+      <div className="price_change_percentage_24h">
         <p className={PCV}>{price_change_percentage_24h}</p>
-        {/* {flag ? (
-          <p className="list-changeUP"> up </p>
-        ) : (
-          <p className="list-changedown"> down </p>
-        )} */}
-      </p>
+      </div>
+      <div className="tv_mc">
+        <div className="total_volume">
+          <b>total volume: </b>
+          {total_volume}
+        </div>
 
-      <p className="total_volume">
-        <b>total volume: </b>
-        {total_volume}
-      </p>
-
-      <p className="market_cap">
-        <b>market cap: </b>
-        {market_cap}
-      </p>
+        <div className="market_cap">
+          <b>market cap: </b>
+          {market_cap}
+        </div>
+      </div>
+      
     </div>
   );
 };
 
-export default List
+export default List;

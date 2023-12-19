@@ -1,12 +1,12 @@
 import React from 'react'
 import "./MarketCap.css";
 
-const Marketcap = () => {
+const Marketcap = ({ market_cap }) => {
   return (
     <div className="Marketcap">
-      Marketcap : <span> 2453249646</span>
+      Marketcap : <span>{market_cap}</span>
     </div>
   );
-}
+};
 
 export default Marketcap

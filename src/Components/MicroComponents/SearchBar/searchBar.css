@@ -1,12 +1,12 @@
 .Searchbar-contaner{
     background-color: rgb(10, 9, 9);
     height: 55px;
-    margin-right: 10px;
-    margin-top: 2px;
+    margin-right: 0px;
+    margin-top: 0px;
 }
 
 .SearchBar{
-    color: antiquewhite;
+    color: rgb(233, 217, 194);
     background-color: rgb(10, 9, 9);
     height: 45px;
     width: 75%;
@@ -32,9 +32,9 @@ form {
     left: 50%;
     transform: translate(-50%, -50%);
     transition: all 1s;
-    width: 50px;
+    width: 50%;
     height: 50px;
-    background: antiquewhite;
+    background: rgba(30, 29, 40, 1);
     box-sizing: border-box;
     border-radius: 25px;
     border: 4px solid #3a80e9;
@@ -66,7 +66,7 @@ input {
     top: 0;
     right: 0;
     border-radius: 50%;
-    color: rgb(10, 9, 9);
+    color: #3a80e9;
     text-align: center;
     font-size: 1.2em;
     transition: all 1s;
